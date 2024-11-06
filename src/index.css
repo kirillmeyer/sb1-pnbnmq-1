@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'GT America LC';
+  src: url('/fonts/GT-America-LC-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-white text-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold italic;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-dark text-white hover:bg-dark/90;
+  }
+  
+  .btn-secondary {
+    @apply bg-primary text-dark hover:bg-primary/90;
+  }
+
+  .input-primary {
+    @apply w-full px-4 py-3 rounded-lg border-2 border-dark/10 bg-white focus:border-dark focus:ring-2 focus:ring-primary focus:border-transparent transition-colors;
+  }
+
+  .label-primary {
+    @apply block font-medium text-dark mb-2;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .form-card {
+    @apply bg-white rounded-xl shadow-lg p-8;
+  }
+
+  .section-title {
+    @apply font-display text-4xl font-bold text-dark mb-4 italic;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-dark/80;
+  }
+}
